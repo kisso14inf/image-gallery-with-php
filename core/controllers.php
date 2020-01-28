@@ -1,4 +1,5 @@
 <?php
+
 /**
  * controllers.php: Az egyes útvonalakat (route) lekezelő függvények.
  * Minden függvénynek egy tömböt kell visszaadnia, aminek az első eleme a nézet (view)  neve.
@@ -19,6 +20,7 @@ function notFoundController() {
         ]
     ];
 }
+
 /**
  * homeController()
  *
@@ -52,12 +54,10 @@ function homeController() {
  
     // $content: egy oldalnyi kép
     $content = getPhotosPaginated($connection, $size, $offset);
-    
-    /**
-    * $lastPage - az utolsó oldal sorszáma
-    */
-    $lastPage = $total % $size == 0 ? intdiv($total, $size) : intdiv($total, $size)+1;
 
+    $lastPage = $total % $size == 0 ? intdiv($total, $size) : intdiv($total, $size) + 1;
+    //----------------------------------------------------------------------------------------
+ 
     return [
         'home',
         [

@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php 
+    <?php //itt daraboltuk fel a layoutot
         require_once "header.php";
-        require_once "$view.php";
+        require_once "$view.php";  
         require_once "footer.php";
     ?>
+    
 </body>
 </html>
