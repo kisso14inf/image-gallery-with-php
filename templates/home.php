@@ -26,7 +26,7 @@
             <?php require "pagination.php"?>
             <!--képek megjelenítése  -->
             <?php foreach ($content as $picture):?>
-                <img src="<?=$picture['thumbnail']?>" alt="">
+             <a href="/image/<?=$picture['id']?>"><img src="<?=$picture['thumbnail']?>" alt="<?=$picture['title']?>" title="<?=$picture['title']?>"></a>
             <?php endforeach ?> 
              <!-- lapozósáv -->
             <?php require "pagination.php"?>
