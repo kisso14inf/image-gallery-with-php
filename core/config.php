@@ -4,7 +4,8 @@
     /**
      * $title: ide írd az alkalmazás nevét
      */
-    $title = "Photo Galery";
+    /* Weboldal neve */
+    $SiteName = "Májsztró Gallery";
     /**
      * lehetséges oldalméret értékek
      */
