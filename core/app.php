@@ -16,6 +16,12 @@ $cleaned = explode("?", $uri) [0];
 //dispatch() fv.meghívása, ami kiválasztja az adott utvonalhoz tartozó controllert
 
 list($view, $data) = dispatch($cleaned, 'notFoundController');
+if(preg_match("%^redirect\:(?<route>.*)$%", $view, $matches))
+{
+ $redirectTarget = $matches['route'];
+ header('Location:'.$redirectTarget);
+ die();
+}
 extract($data);
 
 
