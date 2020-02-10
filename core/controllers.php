@@ -103,10 +103,14 @@ function aboutController() {
  *
  * @return void
  */
-function singleImageEditController()
+function singleImageEditController($params)
 {
-return[
-    "redirect:/",
+    $connection = getConnection();
+    $id = $params['id'];
+    $title = $_POST['title'];
+    updateImage($connection, $id, $title);
+    return[
+    "redirect:/image/$id",
     []
 ];
 }
